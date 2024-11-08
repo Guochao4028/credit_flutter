@@ -1,0 +1,52 @@
+Android 打包
+
+1.修改版本号
+/credit_flutter/pubspec.yaml   
+version: 
+
+2.修改友盟渠道包名
+/credit_flutter/lib/define/define_keys.dart
+ static const String umengChannel = 
+
+3.切换正式环境
+/credit_flutter/lib/define/define_keys.dart
+static const bool environment = true;
+
+4.如果打华为安装包需要换icon
+/credit_flutter/android/app/src/main/AndroidManifest.xml
+ android:icon="@mipmap/icon_logo" || android:icon="@mipmap/icon_logo_b"
+
+iOS 打包
+
+1.修改版本号
+/credit_flutter/pubspec.yaml   
+version:
+
+2.切换正式环境
+/credit_flutter/lib/define/define_keys.dart
+static const bool environment = true;
+
+flutter 打包命令
+
+source ~/.bash_profile
+
+1）android 打包
+1.flutter clean
+2.flutter pub get
+
+3.换logo
+/credit_flutter/android/app/src/main/AndroidManifest.xml
+android:icon="@mipmap/icon_logo"
+icon_logo 不带官方  icon_logo_b 带官方
+
+4.flutter build apk
+
+/Users/white/Desktop/GitsSpace/hycha/credit_flutter/build/app/outputs/flutter-apk
+
+2）iOS 打包
+1.flutter clean
+2.flutter pub get
+3. pod install
+Pod -> other linker flags -> -ObjC   -ld64
+
+检查 static const String newShow = "/news/newsShow"; 所属的接口
