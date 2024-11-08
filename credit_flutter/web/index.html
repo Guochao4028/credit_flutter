@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+                If you are serving your web app in a path other than the root, change the
+                href value below to reflect the base path you are serving from.
+
+                The path provided below has to start and end with a slash "/" in order for
+                it to work correctly.
+
+                For more details:
+                * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+                This is a placeholder for base href that will be replaced by the value of
+                the `--base-href` argument provided to `flutter build`.
+              -->
+    <base href="$FLUTTER_BASE_HREF">
+    <meta charset="UTF-8">
+    <title>慧眼查——查信用 查背调 最全面的社会信用数据服务</title>
+    <meta name="description"
+          content="慧眼查是国内领先的社会信用体系数据综合服务平台，服务于社会信用体系建设、企业信用风险管控、员工背调等多个场景，隶属于慧眼查（北京）数据科技有限公司。 慧眼查全面的信用信息数据库+人工智能算法，为政府信用建设和企业因信用和用人而产生的风险提供专业的解决方案。慧眼查以为政府和企业降低信用风险为使命，让守信者一路绿灯，让失信者寸步难行，为社会信用体系建设贡献力量">
+
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="credit_flutter">
+
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <meta Referer="nowcheck.cn">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+
+
+
+
+
+
+
+
+    </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js"></script>
+</head>
+
+<style>
+  .file-box {
+    display: inline-block;
+    position: relative;
+    padding: 3px 5px;
+    overflow: hidden;
+    color: #fff;
+    background-color: #ccc;
+  }
+
+  .file-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    outline: none;
+    background-color: transparent;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
+
+  .prev-box {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 120px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px #ccc dotted;
+  }
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<a id="ahelf"></a>
+
+<!-- alipayWap: 后台接口返回的form 片段，用于拉起支付宝支付 -->
+<div id="alipayWap" ref="alipayWap"></div>
+
+<form id="form1" hidden="hidden">
+    <div class="file-box">
+        <input type="file" class="file-btn" onChange="uploadImg(this)" accept="image/*" name="file"
+               id="file"/> 上传文件
+    </div>
+    <br/>
+    <div class="prev-box" id="prev-box">
+        <img height="200px" width="200px" id="img"/>
+    </div>
+    <div id="uploadMsg" style="color: #f00"></div>
+</form>
+
+<script>
+
+<!--window.flutterConfiguration = {-->
+<!--  canvasKitBaseUrl: "./canvaskit-wasm/bin/"-->
+<!--};-->
+
+
+    window.addEventListener('load', function (ev) {
+      //屏幕锁
+      // screen.lockOrientationUniversal = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+      // screen.lockOrientationUniversal.lockOrientation("orientation");
+      // screen.orientation.lock();
+      // screen.orientation.lock("landscape");
+      // screen.orientation.lock("landscape");
+
+
+      // Download main.dart.js
+
+
+
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function (engineInitializer) {
+        return engineInitializer.initializeEngine();
+      }).then(function (appRunner) {
+        return appRunner.runApp();
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script> -->
+<!-- <script>
+  // VConsole will be exported to `window.VConsole` by default.
+  var vConsole = new window.VConsole();
+
+</script> -->
+
+
+<script>
+
+  function deleteManngaer(obj){
+    console.log(obj);
+    console.log(1);
+    console.log(2);
+    console.log(3);
+    console.log(4);
+
+    // var url = obj["url"];
+    // var token = obj["token"];
+    // var param = obj["param"];
+    // console.log(url);
+    // console.log(token);
+    // console.log(param);
+    console.log(5);
+    for (let dicKey in obj) {
+    console.log(dicKey + "==" + dic[dicKey]);
+}
+     //ajax请求
+     var httpRequest = new XMLHttpRequest();
+        httpRequest.open(
+          "DELETE",
+          url,
+          true
+        );
+
+        httpRequest.send();
+
+//     $.ajax({
+//         url:url,
+//         type:"delete",
+//         headers:{
+//             "token":token,
+//             'Content-Type':'application/json;charset=utf8'
+//         },
+//         dataType:"json",
+//         data:{
+//           'id':param,
+//         },
+//         success: function(resp){
+//           console.log(resp);
+//         }
+//  });
+
+  }
+
+
+    function uploadImg(obj) {
+      //1. 图片预览
+      //如果浏览器不支持 FileReader 则用文字提示
+      if (typeof FileReader == "undefined") {
+        var prevBox = document.getElementById("prev-box");
+        prevBox.innerHTML = "浏览器不支持预览";
+      } else {
+        //获取上传文件，返回 File对象
+        var file = obj.files[0];
+        var reader = new FileReader();
+
+        //注册读取成功的回调函数
+        reader.onload = function (e) {
+          window.uploadPictures("弹出加载中弹框");
+
+          // var img = document.getElementById("img");
+          // img.src = e.target.result;
+        };
+
+
+        //开始以 DataURL格式读取文件
+        reader.readAsDataURL(file);
+      }
+
+      //2. 图片上传
+      if (typeof FormData == "undefined") {
+        alert("浏览器不支持图片上传");
+      } else {
+        var form = document.getElementById("form1");
+        var data = new FormData(form);
+        //添加自定义字段
+        // data.append("CustomField", "This is some extra data");
+        //ajax请求
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.open(
+          "POST",
+          "https://api.nowcheck.cn/common/uploadImage",
+          // "http://api.dev.nowcheck.cn/common/uploadImage",
+
+          true
+        );
+
+
+
+
+        httpRequest.onload = function (oEvent) {
+          if (httpRequest.status == 200) {
+            //服务器返回的保存路径
+            window.uploadComplete(httpRequest.responseText);
+            // alert(httpRequest.responseText);
+
+          } else {
+            document.getElementById("uploadMsg").innerHTML =
+              "图片上传失败，错误码:" + httpRequest.status;
+          }
+        };
+        httpRequest.send(data);
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+
+    function openEmpower(url) {
+      window.open(url, '认证流程', '');
+    }
+     function mlgmmp(res) {
+      // window.open("",);
+
+      window.open('https://www.baidu.com/', '_parent', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+    }
+
+    function pictureSelection(res) {
+      file.click();
+    }
+
+    function aliPay(res) {
+      // // 将接口返回的form表单显示到页面
+      // document.querySelector('body').innerHTML = res;
+      // // 调用submit方法
+      // document.forms[0].submit()
+
+
+      let div = document.createElement('div');
+      div.setAttribute('id', 'alipay-wap');
+      /* 此处form就是后台返回接收到的数据 */
+      div.innerHTML = res;
+      document.body.appendChild(div);
+      document.forms[1].submit();
+
+      // var object = document.getElementById("alipay-wap");
+      // object.parentNode.removeChild(object);
+
+      var oP = document.getElementById('alipay-wap');
+
+      oP.remove()
+
+
+    }
+
+    function wxPay(res) {
+      console.log(res);
+      document.getElementById('ahelf').href = res;
+      document.getElementById("ahelf").click();
+    }
+
+    function reload(res) {
+      // location.reload();
+      window.location.reload();
+    }
+
+    function wxLogin(res){
+      wx.miniProgram.navigateTo({url: '/pages/login/login?LoginIdentity='+res})
+    }
+
+    function wxMiniProgramPayHandle(params) {
+      wx.miniProgram.navigateTo({url: params})
+
+    }
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

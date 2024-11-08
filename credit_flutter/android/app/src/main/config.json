@@ -1,0 +1,15 @@
+{
+  "module": {
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.CAMERA",
+        "reason": "用于拍照、拍视频、扫描二维码等",
+        "usedScene": {
+          "ability": [
+            "ohos.ability.CAMERA_PHOTO"
+          ]
+        }
+      }
+    ]
+  }
+}

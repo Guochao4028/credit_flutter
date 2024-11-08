@@ -1,0 +1,22 @@
+Target dependency graph (8 targets)
+Flutter in Pods, no dependencies
+Toast in Pods, no dependencies
+fluttertoast in Pods, depends on:
+Flutter in Pods (explicit)
+Toast in Pods (explicit)
+shared_preferences_ios in Pods, depends on:
+Flutter in Pods (explicit)
+video_player_avfoundation in Pods, depends on:
+Flutter in Pods (explicit)
+wakelock in Pods, depends on:
+Flutter in Pods (explicit)
+webview_flutter_wkwebview in Pods, depends on:
+Flutter in Pods (explicit)
+Pods-Runner in Pods, depends on:
+Flutter in Pods (explicit)
+Toast in Pods (explicit)
+fluttertoast in Pods (explicit)
+shared_preferences_ios in Pods (explicit)
+video_player_avfoundation in Pods (explicit)
+wakelock in Pods (explicit)
+webview_flutter_wkwebview in Pods (explicit)

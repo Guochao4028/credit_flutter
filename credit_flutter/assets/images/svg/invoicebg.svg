@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="46px" viewBox="0 0 88 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+        <g id="发票详情" transform="translate(-144.000000, -328.000000)" fill="#FFFFFF" stroke="#1B7CF6">
+            <g id="编组-3" transform="translate(0.000000, 313.000000)">
+                <g id="编组" transform="translate(144.000000, 15.000000)">
+                    <ellipse id="椭圆形" cx="44" cy="23" rx="43.5" ry="22.5"></ellipse>
+                    <ellipse id="椭圆形" cx="44" cy="23" rx="38.5" ry="17.5"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
